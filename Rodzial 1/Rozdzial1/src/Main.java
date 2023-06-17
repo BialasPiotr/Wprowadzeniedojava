@@ -31,7 +31,8 @@ public class Main {
         System.out.println(x/y);
 
         //1.6
-        System.out.println("1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = " + 45);
+         int liczba = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9);
+        System.out.println("1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = " + liczba);
 
         obliczeniekola();
 
