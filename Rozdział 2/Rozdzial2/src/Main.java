@@ -17,6 +17,9 @@ public class Main {
         Fizyka();
         wiek();
         Czas();
+        Nauka();
+        Fiz();
+        AplikacjaFinansowa();
     }
     //2.2
     public static void Walec(){
@@ -122,5 +125,55 @@ public class Main {
 
         System.out.println("Aktualny czas w podanej strefie to: " + currentHour + ":" + currentMinute + ":" + currentSecond);
     }
+    //2.10
 
+    public static void Nauka(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Podaj mase wody w kilogramach: ");
+        double kilo = input.nextDouble();
+
+        System.out.println("Podaj poczatkowa tempretaure ");
+        double tempfirst = input.nextDouble();
+
+        System.out.println("Podaj koncowa temperature ");
+        double templast = input.nextDouble();
+
+        double energia = kilo * (templast - tempfirst)  * 4184;
+        System.out.println("Potrzebna ilosc energii to: " + energia);
+
+
+    }
+
+    //2.12
+    public static void Fiz(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Podaj predkosc startu i przyszpieszenie: ");
+        double predkosc = input.nextDouble();
+        double przyszpieszenie = input.nextDouble();
+        double dlugosc = Math.pow(predkosc, 2) / (przyszpieszenie * 2 );
+        System.out.print("Minimalna dlugosc pasa startowego dla tego samolotu wynosi: " + dlugosc);
+
+
+
+    }
+    //2.13
+    public static void AplikacjaFinansowa(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj kwotę miesięcznych oszczędności: ");
+        double oszczednosci = scanner.nextDouble();
+
+        double zwieksza = 0.05;
+        double zwiekszeniemiesieczne = zwieksza / 12;
+        double stankonta = 0;
+
+        for (int i = 1; i <= 6; i++) {
+            stankonta = (stankonta + oszczednosci) * (1 +  zwiekszeniemiesieczne);
+        }
+
+        System.out.println("Stan konta po sześciu miesiącach: " + stankonta);
+    }
+    
     }
