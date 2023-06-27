@@ -20,6 +20,12 @@ public class Main {
         Nauka();
         Fiz();
         AplikacjaFinansowa();
+        Zdrowie();
+        Geometria();
+        Szescian();
+        odczuwalna();
+        Tabela();
+        Inwestycja();
     }
     //2.2
     public static void Walec(){
@@ -175,5 +181,98 @@ public class Main {
 
         System.out.println("Stan konta po sześciu miesiącach: " + stankonta);
     }
-    
+    //2.14
+    public static void Zdrowie() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Podaj wagę w funtach: ");
+        double wagaFunt = input.nextDouble();
+
+        System.out.print("Podaj wzrost w calach: ");
+        double wzrostCal = input.nextDouble();
+
+        double wagaKg = wagaFunt * 0.45359237;
+        double wzrostM = wzrostCal * 0.0254;
+
+        double bmi = wagaKg / (wzrostM * wzrostM);
+
+        System.out.println("Wskaźnik BMI wynosi: " + bmi);
     }
+    //2.15
+  public static void Geometria(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj x1 i y1: ");
+        double x1 = scanner.nextDouble();
+        double y1 = scanner.nextDouble();
+
+        System.out.print("Podaj x2 i y2: ");
+        double x2 = scanner.nextDouble();
+        double y2 = scanner.nextDouble();
+
+        double odleglosc = Math.pow(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2), 0.5);
+
+        System.out.println("Odległość między dwoma podanymi punktami wynosi: " + odleglosc);
+    }
+//2.16
+    public static void Szescian(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj długość boku: ");
+        double dlugoscBoku = scanner.nextDouble();
+
+        double powierzchnia = (3 * Math.sqrt(3) * Math.pow(dlugoscBoku, 2)) / 2;
+
+        System.out.println("Powierzchnia sześciokąta wynosi: " + powierzchnia);
+    }
+    //2.17
+    public static void odczuwalna(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj temperaturę z przedziału od -50 do 5 stopni Celsjusza: ");
+        double temperatura = scanner.nextDouble();
+
+        System.out.print("Podaj prędkość wiatru (>= 3.2) w km/h: ");
+        double predkoscWiatru = scanner.nextDouble();
+
+        if (temperatura >= -50 && temperatura <= 5 && predkoscWiatru >= 3.2) {
+            double temperaturaOdczuwalna = 13.12 + 0.6215 * temperatura - 11.37 * Math.pow(predkoscWiatru, 0.16)
+                    + 0.3965 * temperatura * Math.pow(predkoscWiatru, 0.16);
+            System.out.println("Temperatura odczuwalna wynosi: " + temperaturaOdczuwalna);
+        } else {
+            System.out.println("Podane wartości nie spełniają warunków.");
+        }
+    }
+    //2.18
+    public static void Tabela(){
+        System.out.println("a\tb\tpow(a, b)");
+        System.out.println("----------------");
+        System.out.println("1\t2\t" + (int) Math.pow(1, 2));
+        System.out.println("2\t3\t" + (int) Math.pow(2, 3));
+        System.out.println("3\t4\t" + (int) Math.pow(3, 4));
+        System.out.println("4\t5\t" + (int) Math.pow(4, 5));
+        System.out.println("5\t6\t" + (int) Math.pow(5, 6));
+    }
+    //2.21
+    public static void Inwestycja(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj kwotę inwestycji: ");
+        double kwotaInwestycji = scanner.nextDouble();
+
+        System.out.print("Podaj roczne oprocentowanie w procentach: ");
+        double roczneOprocentowanie = scanner.nextDouble();
+
+        System.out.print("Podaj liczbę lat: ");
+        int liczbaLat = scanner.nextInt();
+
+        double miesiecznaStopaOprocentowania = roczneOprocentowanie / 100 / 12;
+        double przyszlaWartoscInwestycji = kwotaInwestycji * Math.pow(1 + miesiecznaStopaOprocentowania, liczbaLat * 12);
+
+        System.out.printf("Przyszła wartość inwestycji to %.2f zł", przyszlaWartoscInwestycji);
+    }
+
+    }
+    
+
+
