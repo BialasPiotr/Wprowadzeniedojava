@@ -26,6 +26,8 @@ public class Main {
         odczuwalna();
         Tabela();
         Inwestycja();
+        Nominal();
+        Paliwo();
     }
     //2.2
     public static void Walec(){
@@ -272,7 +274,55 @@ public class Main {
         System.out.printf("Przyszła wartość inwestycji to %.2f zł", przyszlaWartoscInwestycji);
     }
 
+    //2.22
+    public static void Nominal(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Podaj kwotę w centach: ");
+        int amount = input.nextInt();
+
+        int remainingAmount = amount;
+
+        int dollars = remainingAmount / 100;
+        remainingAmount %= 100;
+
+        int quarters = remainingAmount / 25;
+        remainingAmount %= 25;
+
+        int dimes = remainingAmount / 10;
+        remainingAmount %= 10;
+
+        int nickels = remainingAmount / 5;
+        remainingAmount %= 5;
+
+        int pennies = remainingAmount;
+
+        System.out.println("Liczba dolarów: " + dollars);
+        System.out.println("Liczba ćwierćdolarówek: " + quarters);
+        System.out.println("Liczba dziesięciocentówek: " + dimes);
+        System.out.println("Liczba pięciocentówek: " + nickels);
+        System.out.println("Liczba jednocentówek: " + pennies);
     }
-    
+    //2.23
+    public static void Paliwo(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj odległość do przejechania: ");
+        double odleglosc = scanner.nextDouble();
+
+        System.out.print("Podaj liczbę litrów spalanych na 100 km: ");
+        double spalanie = scanner.nextDouble();
+
+        System.out.print("Podaj cenę litra benzyny: ");
+        double cena = scanner.nextDouble();
+
+        double koszt = (odleglosc / 100) * spalanie * cena;
+
+        System.out.println("Koszt paliwa wyniesie " + koszt + " zł");
+    }
+    }
+
+
+
 
 
