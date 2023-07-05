@@ -1,7 +1,9 @@
 public class ComputeArea {
 public static void main(String[] args) {
-         double radius; // Deklaracja zmiennej radius
-         double area; // Deklaracja zmiennej area
+         // Deklaracja zmiennej radius
+         double radius;
+         // Deklaracja zmiennej area
+         double area; 
 
          // Przypisywanie wartości zmiennej radius
          radius = 20; // Teraz zmienna radius ma wartość 20
