@@ -2,6 +2,7 @@
 
 This repository contains my solutions to the tasks and exercises in each chapter of the book "Introduction to Java Programming and Data Structures" by Daniel Liang.
 
+
 ## Table of Contents
 
 1. Chapter 1: Introduction to Computers, Programs, and Java
