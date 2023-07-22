@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 //1.1
         System.out.println("Witaj w Javie, Witaj informatyki i Programowanie to przyjemnosc!");
+        
 //1.2
         System.out.println("Witaj w javie");
         System.out.println("Witaj w javie");
